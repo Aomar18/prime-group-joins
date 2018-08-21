@@ -92,15 +92,49 @@ WHERE
 
 
 
-5. Get the number of orders for each customer. NOTE: It is OK if those without orders are not included in results.
+5. Get the number of orders for each customer. 
+NOTE: It is OK if those without orders are not
+included in results.
+
+SELECT
+"customers"."first_name" ,
+COUNT 
+("orders"."address_id")
 
 
+FROM 
+"customers"
+
+JOIN 
+"addresses"
+
+ON
+"customers"."id"
+=
+"addresses"."customer_id"
+
+JOIN 
+"orders"
+
+ON 
+"orders"."address_id"
+=
+"addresses"."id"
+
+GROUP BY
+"customers"."first_name"
+;
 
 
-
+lucy 3
+lisa 5
+charles 1
 
 
 6. How many customers do we have?
+
+
+
 
 
 7. How many products do we carry?
