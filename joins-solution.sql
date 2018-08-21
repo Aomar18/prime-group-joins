@@ -147,7 +147,39 @@ SELECT COUNT (*) FROM "customers" ;
 SELECT COUNT (*) FROM "products";
 
 
-8. What is the total available on-hand quantity of diet pepsi?
+8. What is the total available 
+on-hand quantity of diet pepsi?
+
+88 + 3 + 1
+
+SELECT
+
+"warehouse_product"."on_hand"
+
+
+FROM
+"line_items"
+
+JOIN
+"products"
+
+ON
+"line_items"."product_id"
+=
+"products"."id"
+
+JOIN 
+"warehouse_product"
+
+ON
+"products"."id"
+=
+"warehouse_product"."product_id"
+
+WHERE 
+"products"."description" = 'diet pepsi'
+;
+
 
 
 
