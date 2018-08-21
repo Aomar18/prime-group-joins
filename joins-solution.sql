@@ -142,8 +142,16 @@ SELECT COUNT (*) FROM "customers" ;
 
 7. How many products do we carry?
 
+            7
+
+SELECT COUNT (*) FROM "products";
+
 
 8. What is the total available on-hand quantity of diet pepsi?
+
+
+
+
 
 
 9. (Stretch) How much was the total cost for each order?
