@@ -133,6 +133,9 @@ charles 1
 
 6. How many customers do we have?
 
+            4
+
+SELECT COUNT (*) FROM "customers" ;
 
 
 
